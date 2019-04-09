@@ -20,6 +20,10 @@ class Prueba extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->view('layouts/head');
+		$this->load->view('layouts/header');
+		$this->load->view('layouts/sidebar');
 		$this->load->view('vista_prueba');
+		$this->load->view('layouts/footer');
 	}
 }
