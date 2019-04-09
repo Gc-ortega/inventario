@@ -1,0 +1,20 @@
+Configuración:
+$ git config --global user.name "Gean Ortega 2019"
+$ git config --global user.email "gc_ortega@outlook.com"
+$ git config --global color.ui true
+$ git config --global --list
+
+generar id ssh
+$ ssh-keygen(ingresar clave y enter)
+
+Luego ir a la carpeta .shh(c/usuario)
+$ cat id_rsa.pub(para desencriptar)
+
+PAra empezar a rastrear
+$ git init
+$ git add -A
+$ git commit -m "CodigoBase Limpio"(hacer el commit)
+
+
+
+
