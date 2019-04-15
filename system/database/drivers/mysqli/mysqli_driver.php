@@ -37,6 +37,8 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+
 /**
  * MySQLi Database Adapter Class
  *
@@ -51,6 +53,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * @link		https://codeigniter.com/user_guide/database/
  */
 class CI_DB_mysqli_driver extends CI_DB {
+
+	
 
 	/**
 	 * Database driver
@@ -114,6 +118,8 @@ class CI_DB_mysqli_driver extends CI_DB {
 	 * @param	bool	$persistent
 	 * @return	object
 	 */
+
+
 	public function db_connect($persistent = FALSE)
 	{
 		// Do we have a socket path?
@@ -541,4 +547,15 @@ class CI_DB_mysqli_driver extends CI_DB {
 		$this->conn_id->close();
 	}
 
+	function free_db_resource()
+	{
+    do
+    {
+        if($l_result = mysqli_store_result($this->conn_id))
+        {
+            mysqli_free_result($l_result);
+        }
+    }
+    while(mysqli_more_results($this->conn_id)  && mysqli_next_result($this->conn_id));
+	}
 }
