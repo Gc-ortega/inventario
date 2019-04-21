@@ -21,6 +21,7 @@ class Acceso extends CI_Controller {
 				
 			}
 			else{
+				
 				$data  = array(
 					'id_acc' => $res->id_acc,
 					'cuen_acc' => $res->cuen_acc,
@@ -33,6 +34,7 @@ class Acceso extends CI_Controller {
 					'fnac_pers' => $res->fnac_pers,
 					'emai_pers' => $res->emai_pers,
 					'celu_pers' => $res->celu_pers,
+					'fregistro' => $res->freg_pers,
 					'login' => TRUE
 				);
 
@@ -45,5 +47,9 @@ class Acceso extends CI_Controller {
 				}
 				
 			}
+	}
+	 public function logout(){
+		$this->session->sess_destroy();
+		redirect(base_url());
 	}
 }

@@ -2,8 +2,8 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Colecciones 
-                        <small class=" pull-right">Usted puede agrupar sus pruebas en colecciones.</small>
+                        PRUEBAS 
+                        <small class=" pull-right">Lista</small>
                     </h1>
                      <!-- 
                     <ol class="breadcrumb">
@@ -16,7 +16,17 @@
                 <!-- Main content -->
                 <section class="content ">
                     <div class="row ">
-                        
+                         <div class="col-md-12">
+                            <!-- The time line -->
+                            <ul class="timeline">
+                                <?php echo $Pruebas; ?>
+                                <!-- timeline time label -->
+
+                                <li>
+                                    <i class="fa fa-clock-o"></i>
+                                </li>
+                            </ul>
+                        </div><!-- /.col -->
                     </div>
                 </section>
-    </aside>
+</aside>
